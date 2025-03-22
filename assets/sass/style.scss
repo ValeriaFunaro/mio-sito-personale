@@ -4,10 +4,17 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+html,
+body {
+  overflow-x: hidden;
+  width: 100%;
+  position: relative;
+}
+
+//Colori
 $navbar-bg: #ffffff1f;
 $nav-link-color: white;
 $nav-hover-color: rgba(255, 255, 255, 0.722);
-
 
 // Stili per la navbar
 .custom-navbar {
@@ -64,7 +71,7 @@ $nav-hover-color: rgba(255, 255, 255, 0.722);
   padding-top: 5rem;
 }
 
-// Animazioni
+// Animazioni transizioni
 .text-animation {
   animation: fadeInUp 1s ease forwards;
 }
@@ -91,8 +98,19 @@ $nav-hover-color: rgba(255, 255, 255, 0.722);
   }
 }
 
+//Animazione stelle
+@keyframes pulseRotate {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1.2) rotate(10deg);
+    opacity: 1;
+  }
+}
+
 //Footer
-.footer {
 .footer {
   background-color: #6350ba;
   color: white;
@@ -128,4 +146,3 @@ $nav-hover-color: rgba(255, 255, 255, 0.722);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
-
