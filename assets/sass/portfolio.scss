@@ -1,0 +1,269 @@
+//Esperienze
+.timeline-section {
+  background-color: #e7ddff;
+  color: #39015e;
+
+  h2 {
+    animation: fadeInUp 1s ease-out forwards;
+  }
+
+  .timeline {
+    position: relative;
+    padding-left: 30px;
+    margin-left: 20px;
+    border-left: 4px solid #7851c1;
+  }
+
+  .timeline-item {
+    margin-bottom: 2rem;
+    position: relative;
+    animation: fadeInUp 1s ease-out forwards;
+
+    .timeline-date {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+      color: #7851c1;
+    }
+
+    .timeline-content {
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+
+      h5 {
+        margin-bottom: 0.2rem;
+        font-weight: bold;
+      }
+
+      p {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .timeline {
+      padding-left: 20px;
+      margin-left: 0;
+    }
+
+    .timeline-item {
+      .timeline-content {
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+//Skills
+.skills-section {
+  background: radial-gradient(
+    circle,
+    rgba(252, 70, 107, 1) 0%,
+    rgba(99, 80, 186, 1) 100%
+  );
+  color: white;
+
+  h2 {
+    animation: fadeInUp 1s ease forwards;
+  }
+
+  .skills-card {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+
+    &:hover {
+      transform: translateY(-5px);
+    }
+
+    ul {
+      padding: 0;
+      li {
+        font-size: 1.1rem;
+        margin-bottom: 0.8rem;
+
+        i {
+          color: white;
+          font-size: 1.3rem;
+        }
+      }
+    }
+  }
+}
+
+//Progetti
+.projects-section {
+  background-color: #e7ddff;
+  padding: 5rem 0;
+
+  h2 {
+    color: #39015e;
+    margin-bottom: 3rem;
+    position: relative;
+  }
+
+  .project-card {
+    background-color: #7851c1;
+    color: white;
+    transition: all 0.4s ease;
+    border: 3px solid #39015e;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    .project-image-container {
+      position: relative;
+      overflow: hidden;
+      border-radius: 10px;
+      margin-bottom: 15px;
+
+      img {
+        transition: transform 0.6s ease;
+        width: 100%;
+        height: auto;
+      }
+    }
+
+    h5 {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      transition: color 0.3s ease;
+    }
+
+    .project-description {
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+    }
+
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1.2rem;
+
+      .tech-tag {
+        background-color: rgba(255, 255, 255, 0.15);
+        color: white;
+        border-radius: 20px;
+        padding: 3px 10px;
+        font-size: 0.8rem;
+        transition: all 0.3s ease;
+      }
+    }
+
+    .btn-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: auto;
+
+      .btn {
+        border-radius: 30px;
+        font-weight: 600;
+        flex: 1;
+        margin: 0 5px;
+        padding: 8px 10px;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+        position: relative;
+        overflow: hidden;
+        z-index: 1;
+
+        &:before {
+          transition: left 0.3s ease;
+          z-index: -1;
+        }
+
+        &:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 5px 15px rgba(196, 7, 234, 0.456);
+
+          &:before {
+            left: 0;
+          }
+        }
+
+        &:active {
+          transform: translateY(0);
+        }
+      }
+
+      .btn-outline-light {
+        &:hover {
+          background-color: transparent;
+          border-color: white;
+        }
+      }
+    }
+
+    &:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 30px rgba(208, 35, 252, 0.2);
+
+      .project-image-container img {
+        transform: scale(1.08);
+      }
+
+      .tech-tag {
+        background-color: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+
+  .coming-soon-card {
+    background: linear-gradient(
+      45deg,
+      rgba(252, 70, 107, 0.3) 0%,
+      rgba(99, 80, 186, 0.3) 100%
+    );
+    border: 2px dashed #39015e;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 300px;
+
+    .soon-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: 0.6;
+      animation: pulse 2s infinite ease-in-out;
+    }
+
+    h5 {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    p {
+      opacity: 0.8;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .project-card {
+      margin-bottom: 2rem;
+    }
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+}

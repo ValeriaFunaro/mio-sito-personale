@@ -1,1 +1,86 @@
-/*# sourceMappingURL=contatti.css.map */
+.contact-form-section {
+  background-color: #e7ddff;
+  padding: 4rem 0;
+}
+.contact-form-section .contact-card {
+  background-color: #7851c1;
+  border: 3px solid #39015e;
+  border-radius: 20px;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+}
+.contact-form-section label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.contact-form-section .form-control {
+  border-radius: 10px;
+  padding: 0.8rem 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+.contact-form-section .form-control:focus {
+  box-shadow: 0 0 0 0.25rem rgba(236, 185, 252, 0.25);
+  border-color: #39015e;
+}
+.contact-form-section .btn-contact {
+  background: linear-gradient(to right, rgba(252, 70, 107, 0.8) 0%, rgba(99, 80, 186, 0.8) 100%);
+  color: white;
+  border-radius: 50px;
+  border: none;
+  padding: 10px 25px;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+}
+.contact-form-section .btn-contact:hover {
+  background: linear-gradient(to right, rgb(252, 70, 107) 0%, rgb(99, 80, 186) 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+.contact-form-section .btn-contact:active {
+  transform: translateY(0);
+}
+
+.contact-info-section {
+  background-color: rgb(236, 185, 252);
+}
+.contact-info-section .info-card {
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #39015e;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease-out forwards;
+  animation-delay: 0.2s;
+}
+.contact-info-section .contact-icon {
+  background: linear-gradient(to right, rgba(252, 70, 107, 0.8) 0%, rgba(99, 80, 186, 0.8) 100%);
+  color: white;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  transition: transform 0.3s ease;
+}
+.contact-info-section .contact-icon:hover {
+  transform: scale(1.1);
+}
+.contact-info-section h5 {
+  color: #7851c1;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .contact-form-section,
+  .contact-info-section {
+    padding: 3rem 0;
+  }
+  .contact-card,
+  .info-card {
+    padding: 2rem !important;
+  }
+}/*# sourceMappingURL=contatti.css.map */
