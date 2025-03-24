@@ -344,16 +344,8 @@
 
   .btn-instagram {
     position: relative;
-    background: linear-gradient(
-      45deg,
-      #405de6,
-      #5851db,
-      #833ab4,
-      #c13584,
-      #e1306c,
-      #fd1d1d
-    );
-    color: white;
+    background-color: white;
+    color: #39015e;
     padding: 15px 30px;
     border-radius: 50px;
     font-weight: 600;
@@ -361,25 +353,9 @@
     overflow: hidden;
     transition: all 0.3s ease;
 
-    .btn-shine {
-      position: absolute;
-      top: -50%;
-      left: -50%;
-      width: 200%;
-      height: 200%;
-      background: rgba(255, 255, 255, 0.1);
-      transform: rotate(45deg);
-      transition: all 0.3s ease;
-    }
-
     &:hover {
       transform: translateY(-3px);
       box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-      color: white;
-
-      .btn-shine {
-        transform: rotate(45deg) translate(100%, 100%);
-      }
     }
 
     &:active {

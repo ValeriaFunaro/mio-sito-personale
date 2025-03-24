@@ -24,22 +24,44 @@
   border-color: #39015e;
 }
 .contact-form-section .btn-contact {
-  background: linear-gradient(to right, rgba(252, 70, 107, 0.8) 0%, rgba(99, 80, 186, 0.8) 100%);
-  color: white;
+  background-color: white;
+  color: #39015e;
   border-radius: 50px;
   border: none;
-  padding: 10px 25px;
+  padding: 12px 35px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  position: relative;
+  overflow: hidden;
   transition: all 0.3s ease;
-  display: inline-flex;
-  align-items: center;
+}
+.contact-form-section .btn-contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+  transform: skewX(-25deg);
+  transition: all 0.5s ease;
 }
 .contact-form-section .btn-contact:hover {
-  background: linear-gradient(to right, rgb(252, 70, 107) 0%, rgb(99, 80, 186) 100%);
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+.contact-form-section .btn-contact:hover::before {
+  left: 100%;
 }
 .contact-form-section .btn-contact:active {
   transform: translateY(0);
+}
+.contact-form-section .btn-contact i {
+  margin-right: 8px;
+  transition: transform 0.3s ease;
+}
+.contact-form-section .btn-contact:hover i {
+  transform: translateX(3px);
 }
 
 .contact-info-section {
