@@ -36,15 +36,25 @@ jobs:
 
       - name: Compile SCSS to CSS
         run: |
-          npx sass assets/sass/style.scss:dist/css/style.css
-          npx sass assets/sass/home.scss:dist/css/home.css
-          npx sass assets/sass/portfolio.scss:dist/css/portfolio.css
-          npx sass assets/sass/contatti.scss:dist/css/contatti.css
+          npx sass --style=compressed --no-source-map assets/sass/:dist/css/
+          echo "Compiled CSS files:"
+          ls -la dist/css/
+          echo "Content of style.css:"
+          cat dist/css/style.css
+
+      - name: Debug SASS files
+        run: |
+          echo "SASS files in assets/sass/:"
+          ls -la assets/sass/
+          echo "Current directory structure:"
+          tree || true
 
       - name: Prepare GitHub Pages deployment
         run: |
           touch .nojekyll
-          ls -la dist/css
+          cp -r dist/css/* dist/
+          echo "Final dist directory contents:"
+          ls -la dist/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
