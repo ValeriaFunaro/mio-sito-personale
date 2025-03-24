@@ -9,10 +9,11 @@ Ciao, sono Valeria Funaro, sviluppatrice web e studentessa presso start2impact. 
 Il sito è progettato per presentare le mie competenze e i miei lavori a potenziali interessati. È strutturato nelle seguenti sezioni:
 
 - **Chi sono**: Una breve presentazione personale
+- **Esperienza**:Elenco di tutte le mie esperienze e formazioni
 - **Competenze**: Le mie skills tecniche
 - **Progetti**: I lavori che ho realizzato
 - **Disegni**: La mia galleria artistica
-- **Contattami**: Un modulo per mettersi in contatto con me
+- **Contatti**: Un modulo per mettersi in contatto con me
 
 ## 🛠️ Tecnologie Utilizzate
 
