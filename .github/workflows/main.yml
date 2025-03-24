@@ -23,15 +23,28 @@ jobs:
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
+        with:
+          node-version: "18"
 
-      - name: Install Sass
-        run: npm install -g sass
+      - name: Install dependencies
+        run: |
+          npm init -y
+          npm install sass
+
+      - name: Create dist directory
+        run: mkdir -p dist/css
 
       - name: Compile SCSS to CSS
-        run: sass assets/sass:dist/css --no-source-map
+        run: |
+          npx sass assets/sass/style.scss:dist/css/style.css
+          npx sass assets/sass/home.scss:dist/css/home.css
+          npx sass assets/sass/portfolio.scss:dist/css/portfolio.css
+          npx sass assets/sass/contatti.scss:dist/css/contatti.css
 
       - name: Prepare GitHub Pages deployment
-        run: touch .nojekyll
+        run: |
+          touch .nojekyll
+          ls -la dist/css
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
